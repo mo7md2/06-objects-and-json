@@ -27,7 +27,7 @@ var notActuallyJSON = {
 
 // The following line is valid JavaScript, but the object is not written in valid JSON syntax.
 // [ Step 2 ] Use JSONLint to validate the object in the following line; then, edit the object so it passes the validator.
-var eddie = {name:"Eddie Vedder", age:49};
+var eddie = {"name":"Eddie Vedder", "age":49};
 
 // We frequently want to turn a JavaScript object into a JSON string, and vice versa.
 // JavaScript has a built-in global object called `JSON` that contains a number of useful methods for manipulating JSON.
@@ -71,7 +71,9 @@ var grungeAlbums = {
     }
   ]
 };
-
+var grungeAlbumsJSON = JSON.stringify(grungeAlbums)
+console.log(grungeAlbums)
+console.log(JSON.parse(grungeAlbumsJSON))
 
 // Imagine that we only had JSON to work with, and wanted to convert it to a JS Object.
 // Fortunately, the `JSON` global object converts both ways - to and from JSON.
